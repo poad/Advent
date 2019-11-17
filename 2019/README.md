@@ -41,7 +41,8 @@ CDK の [Getting Started](https://docs.aws.amazon.com/cdk/latest/guide/getting_s
 #### 公開されているDockerイメージを使用する
 
 ```$sh
-docker run --rm -it -v $(pwd)/app poad/scala-aws-cdk:sbt
+mkdir -p app
+docker run --rm -it -v $(pwd)/app:/home/zsh/cdk poad/scala-aws-cdk:sbt
 ```
 
 #### ビルド&実行
