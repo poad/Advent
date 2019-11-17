@@ -2,6 +2,7 @@
 *.log
 
 .idea
+
 ### https://raw.github.com/github/gitignore/baf13553d070d1d85d6c873235eb529077c35aaf/Scala.gitignore
 
 *.class
@@ -1110,3 +1111,5 @@ public
 .tern-port
 
 
+.idea
+cdk.context.json
