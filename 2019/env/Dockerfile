@@ -151,6 +151,7 @@ LABEL maintainer="Kenji Saito<ken-yo@mbr.nifty.com>"
 ARG MAVEN_VERSION
 ARG JAVA_HOME
 ARG PYTHON_PIP_VERSION
+ARG SBT_HOME
 
 USER root
 
