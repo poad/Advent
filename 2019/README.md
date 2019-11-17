@@ -54,3 +54,12 @@ docker build --rm -t cdk:sbt env/
 docker run --rm -it -v $(pwd)/app:/home/zsh/cdk cdk:sbt
 ```
 
+#### クレデンシャル設定
+
+`aws configure` で設定してください。 
+Dockerに詳しい方は Dockerfile で COPY してやってください。(誤ってDocker Hubへpushしてしまうとセキュリティ上の問題に繋がるのでおすすめしません) 
+或いは、未検証ですが環境変数での指定でも行けるかも知れません。
+
+```$sh
+aws configure
+```
