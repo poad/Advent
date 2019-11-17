@@ -182,7 +182,7 @@ RUN apt-get update -qq \
  && ln -s /usr/local/node/bin/node /usr/local/node/bin/nodejs \
  && npm install n -g \
  && n stable \
- && apt-get autoremove --purge --allow-remove-essential -qqy ca-certificates bash curl \
+ && apt-get autoremove --purge -qqy ca-certificates curl \
  && apt-get clean \
  && rm -rf /var/lib/apt/lists/* /tmp/* /var/log/apt/* /var/log/alternatives.log /var/log/dpkg.log /var/log/faillog /var/log/lastlog \
  && rm -rf /tmp/* \
