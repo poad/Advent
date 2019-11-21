@@ -43,8 +43,8 @@ ${output}
 
 function main(){
 	env
-	ls -al
-	pwd
+
+	cd /
 
 	tree
 
