@@ -46,8 +46,6 @@ function main(){
 	ls -al
 	pwd
 
-	apk --update add --no-cache tree
-
 	tree
 
 	cd ${GITHUB_WORKSPACE}/${INPUT_WORKING_DIR}

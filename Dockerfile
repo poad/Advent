@@ -11,6 +11,9 @@ RUN apk --update add --no-cache --virtual .build-deps \
  && pip install -U awscli \
  && npm i -g aws-cdk
 
+RUN apk --update add --no-cache tree
+
+
 ARG USER_NAME="cdk"
 
 RUN addgroup -g 1000 -S ${USER_NAME} \
