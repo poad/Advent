@@ -42,6 +42,9 @@ ${output}
 }
 
 function main(){
+	env
+	ls -al
+
 	cd ${GITHUB_WORKSPACE}/${INPUT_WORKING_DIR}
 	runCdk
 }
