@@ -1,41 +1,46 @@
 name: CDK Sample
  
-on: [push]
+on:
+  push:
+    branches:
+    - master
 
 jobs:
   aws_cdk:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout the target source code
+        uses: actions/checkout@v1
 
       - name: cdk diff
-        uses: poad/Advent@master
+        uses: poad/github-actions@master
         with:
           cdk_subcommand: 'diff'
           actions_comment: true
-          working_dir: '2019/gha/cdk/'
+          working_dir: 'src'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'us-west-2'
 
       - name: cdk deploy
-        uses: poad/Advent@master
+        uses: poad/github-actions@master
         with:
           cdk_subcommand: 'deploy'
           cdk_stack: 'stack1'
           actions_comment: false
-          working_dir: '2019/gha/cdk/'
           args: '--require-approval never'
+          working_dir: 'src'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_DEFAULT_REGION: 'us-west-2'
 
       - name: cdk synth
-        uses: poad/Advent@master
+        uses: poad/github-actions@master
         with:
           cdk_subcommand: 'synth'
-          working_dir: '2019/gha/cdk/'
+          working_dir: 'src'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
