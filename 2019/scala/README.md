@@ -25,7 +25,7 @@ CDK の [Getting Started](https://docs.aws.amazon.com/cdk/latest/guide/getting_s
 |:-----:|:--------:|:---:|
 | Node.js | 12.13.0 |  |
 | YARN | 1.19.1 | 要らないだろうけどついでに入れました |
-| Java | 11.0.5-b10 (AdoptOpenJDK) | 公式ではJava 8前提ですが、きっと動くでしょう |
+| Java | 8u232-b09 (AdoptOpenJDK) |  |
 | Apache Maven | 3.6.2 | |
 | sbt | 1.3.3 | |
 | Scala | 2.13.1 | build.sbt で指定したものが使われるので、実際には要らないはず |
