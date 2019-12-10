@@ -6,15 +6,10 @@ name := "hello-world"
 organization := "com.github.poad"
 version := "1.0"
 
-val cdkVersion = "1.16.3.DEVPREVIEW"
+val cdkVersion = "1.18.0"
 val scalaTestVersion = "3.0.8"
 libraryDependencies ++= Seq(
   "software.amazon.awscdk" % "core" % cdkVersion,
-  "software.amazon.awscdk" % "iam" % cdkVersion,
-  "software.amazon.awscdk" % "s3" % cdkVersion,
-  "software.amazon.awscdk" % "sns" % cdkVersion,
-  "software.amazon.awscdk" % "sns-subscriptions" % cdkVersion,
-  "software.amazon.awscdk" % "sqs" % cdkVersion,
   "org.scalactic" %% "scalactic" % scalaTestVersion,
   "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
 )
